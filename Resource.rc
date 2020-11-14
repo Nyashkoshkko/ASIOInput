@@ -1,0 +1,128 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Русский (Россия) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 192, 157
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT2,129,11,46,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "VSTBUF",IDC_STATIC,96,14,26,8
+    EDITTEXT        IDC_EDIT3,42,11,46,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "FREQ",IDC_STATIC,16,15,19,8
+    COMBOBOX        IDC_COMBO1,16,29,160,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "DRIVER",IDC_STATIC,18,47,23,8
+    LTEXT           "STATUS",IDC_STATIC,18,59,26,8
+    LTEXT           "driver name",IDC_STATIC_ASIONAME,49,46,127,8,NOT WS_GROUP
+    LTEXT           "NOT LOADED",IDC_STATIC_ASIOSTATUS,50,59,48,8,NOT WS_GROUP
+    PUSHBUTTON      "ASIO CONTROL PANEL",IDC_BUTTON1,87,81,88,14
+    LTEXT           "ASIOBUF",IDC_STATIC,18,84,30,8
+    LTEXT           "512",IDC_STATIC_ASIOBUF,52,84,29,8,NOT WS_GROUP
+    LTEXT           "error message",IDC_STATIC_ERROR_MESSAGE,19,96,154,8,NOT WS_GROUP
+    GROUPBOX        "RING BUFFER",IDC_STATIC_RING_GROUP,14,107,79,22,NOT WS_VISIBLE
+    CONTROL         "2x",IDC_RADIO_ASIOBUFX2,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP,19,117,20,10
+    CONTROL         "3x",IDC_RADIO_ASIOBUFX3,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,43,117,18,10
+    CONTROL         "4x",IDC_RADIO_ASIOBUFX4,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,66,117,21,10
+    COMBOBOX        IDC_COMBO2,33,132,58,32,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,115,132,57,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "UNLOAD",IDC_BUTTON3,133,54,41,14
+    CONTROL         "STEREO",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,134,117,38,10
+    LTEXT           "IN 1",IDC_STATIC,16,135,14,8
+    LTEXT           "IN 2",IDC_STATIC,98,135,14,8
+    LTEXT           "INFO",IDC_STATIC,18,72,18,8
+    LTEXT           "INFO",IDC_STATIC_ASIO_INFO,41,72,132,8,NOT WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // Русский (Россия) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
