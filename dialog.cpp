@@ -275,7 +275,7 @@ BOOL CMFCApplication1App::InitInstance()
     // create dialog window
     dlg.Create(IDD_DIALOG1);
     dlg.m_asio_status = "NOT LOADED";
-    dlg.m_ringsize_int = 1; //0 - x2, 1 - x3, 2 - x4; x3 ring mult is default
+    dlg.m_ringsize_int = 2; //0 - x2, 1 - x3, 2 - x4; x4 ring mult is default
     dlg.m_is_stereo = 1;
     dlg.m_input_num_1.AddString("0 - Input 0");
     dlg.m_input_num_1.AddString("1 - Input 1");
@@ -287,6 +287,10 @@ BOOL CMFCApplication1App::InitInstance()
 
     // create vst struct for host
     memset(&VSTPlugin, 0, sizeof(struct SVSTPlugin));
+    VSTPlugin.data1[3] = 'V';
+    VSTPlugin.data1[2] = 's';
+    VSTPlugin.data1[1] = 't';
+    VSTPlugin.data1[0] = 'P';
     VSTPlugin.InputCount = 0;
     VSTPlugin.OutputCount = 2;
     VSTPlugin.PluginProperties = 1 | (1 << 4) | (1 << 8); // bit 0 - plugin with editor; bit 4 - support UpdateBufferData() call; bit 8 - host will reserve dedicated mixer line for plugin
@@ -390,6 +394,8 @@ float** vstoutputbuffers;
 int vstsamplecount;
 void VSTPluginCall_UpdateBufferData(void* param1, float** buffersIn, float** buffersOut, int bufSize)
 {
+    // FL Studio call this function with various bufSize by default (from 1 to m_vst_buf_size)
+    // for fix that use Plugin options - Troubleshooting - Use fixed size buffers - More - Process maximum size buffers
     dlg.m_vst_buf_size = bufSize;
     
     if(!run)
